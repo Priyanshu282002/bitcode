@@ -18,7 +18,7 @@ const Navbar = ({isLoggedIn,setIsLoggedIn}) => {
   return (
     <div>
         <div className='flex justify-between px-10 py-4 items-center border-b-2 h-[10vh]'>
-            <div className='flex gap-10 flex-wrap items-center text-xl'>
+            <div className='flex gap-10 items-center text-xl'>
                 <NavLink to="/">
                     <img src={logo} alt='logo' className='sm:h-6 h-8 w-25 cursor-pointer hover:scale-110 transition-all duration-300'/>
                 </NavLink>
@@ -31,26 +31,24 @@ const Navbar = ({isLoggedIn,setIsLoggedIn}) => {
                 </NavLink>
                 
             </div>
-
-            <div className='flex gap-6 flex-wrap sm:hidden'>
-                {localStorage.getItem("Token")!=null?(<NavLink to="/login">
-                    <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold' onClick={logoutHandler}>Log Out</button>
-                </NavLink>) : (<NavLink to="/login">
-                    <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold'>Log In</button>
-                </NavLink>)}
-
-                {localStorage.getItem("Token")!= null ? (<NavLink to="/signup">
-                    <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold hidden'>Sign Up</button>
-                </NavLink>):(<NavLink to="/signup">
-                    <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold '>Sign Up</button>
-                </NavLink>)
-                }
-                
-                
-                
-            </div>
-            
-            
+            {
+                localStorage.getItem("Token")==null?(
+                    <div className='flex gap-6 sm:flex sm:text-xs sm:gap-2'>
+                        <NavLink to="/login">
+                        <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold'>Log In</button>
+                        </NavLink>
+                        <NavLink to="/signup">
+                            <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold '>Sign Up</button>
+                        </NavLink>
+                    </div>
+                ):(
+                    <div className=' sm:flex sm:text-xs'>
+                    <NavLink to="/login">
+                        <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold' onClick={logoutHandler}>Log Out</button>
+                    </NavLink>
+                    </div>
+                )
+            }
         </div>
         
     </div>
