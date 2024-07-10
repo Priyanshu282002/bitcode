@@ -17,22 +17,22 @@ const Navbar = ({isLoggedIn,setIsLoggedIn}) => {
 
   return (
     <div>
-        <div className=' flex justify-between px-10 py-4 items-center border-b-2 h-[10vh]'>
+        <div className='flex justify-between px-10 py-4 items-center border-b-2 h-[10vh]'>
             <div className='flex gap-10 flex-wrap items-center text-xl'>
                 <NavLink to="/">
-                    <img src={logo} alt='logo' className=' h-8 w-25 cursor-pointer hover:scale-110 transition-all duration-300'/>
+                    <img src={logo} alt='logo' className='sm:h-6 h-8 w-25 cursor-pointer hover:scale-110 transition-all duration-300'/>
                 </NavLink>
                 
                 <NavLink to="/courses">
-                    <button className=' hover:bg-slate-800 hover:text-white transition-all duration-300 px-2 py-1 rounded-lg'>Courses</button>
+                    <button className=' hover:bg-slate-800 hover:text-white transition-all duration-300 px-2 py-1 rounded-lg sm:hidden'>Courses</button>
                 </NavLink>
                 <NavLink to={`${localStorage.getItem("Token")!=null?"/practice":"/login"}`}>
-                    <button className='hover:bg-slate-800 hover:text-white transition-all duration-300 px-2 py-1 rounded-lg' >Practice</button>
+                    <button className='hover:bg-slate-800 hover:text-white transition-all duration-300 px-2 py-1 rounded-lg sm:hidden' >Practice</button>
                 </NavLink>
                 
             </div>
 
-            <div className='flex gap-6 flex-wrap'>
+            <div className='flex gap-6 flex-wrap sm:hidden'>
                 {localStorage.getItem("Token")!=null?(<NavLink to="/login">
                     <button className=' bg-green-500 text-white px-3 py-1 rounded-lg hover:scale-125 transition-all duration-300 font-semibold' onClick={logoutHandler}>Log Out</button>
                 </NavLink>) : (<NavLink to="/login">

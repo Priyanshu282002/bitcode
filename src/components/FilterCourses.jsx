@@ -6,7 +6,7 @@ const FilterCourses = ({filterData,category,setCategory}) => {
     }
   return (
     <div>
-        <div className="w-11/12 flex flex-wrap max-w-max space-x-4 gap-y-4 mx-auto py-4 justify-center">
+        <div className="w-11/12 flex flex-wrap max-w-max space-x-4 gap-y-4 mx-auto py-4 justify-center sm:px-10">
             {
                 filterData.map((data)=>{
                 return(

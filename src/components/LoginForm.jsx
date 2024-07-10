@@ -57,7 +57,7 @@ const LoginForm = ({setIsLoggedIn}) => {
 
     const[showPassword, setShowPassword]=useState(false);
   return (
-    <form onSubmit={submitHandler} className='flex flex-col w-4/5 gap-y-2 '>
+    <form onSubmit={submitHandler} className='flex flex-col w-4/5 gap-y-2 sm:w-full'>
         <label className='w-full'>
             <p className='text-white mb-1 leading-[1.375rem]'>Email Address<sup className=' text-red-600'>*</sup></p>
 

@@ -10,7 +10,7 @@ import Tags from '../components/Tags'
 const Practice = () => {
   const [sheets, setSheets]=useState(null);
   const [loading,setLoading] = useState(true);
-  const [category,setCategory]=useState(filterData[0].title);
+  const [category,setCategory]=useState(filterData[0].api);
 
   
   return (
