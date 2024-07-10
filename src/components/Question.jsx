@@ -13,7 +13,7 @@ const Question = ({question}) => {
                     question.QuestionName    
                 }
             </a>
-            <div className={`${question.Difficulty==="Easy"?"text-green-600":`${question.Difficulty==="Medium"?"text-yellow-400 ":"text-red-700 "}`} `}>
+            <div className={`${question.Difficulty==="Easy"?"text-green-600":`${question.Difficulty==="Medium"?"text-yellow-400 ":"text-red-700 "}`} min-w-16 text-center`}>
                 {
                     question.Difficulty
                 }
