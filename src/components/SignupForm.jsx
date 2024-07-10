@@ -32,7 +32,7 @@ const SignupForm = ({setIsLoggedIn}) => {
     //   },[]);
     const submitHandler = async(event) => {
         event.preventDefault();
-        const signupdata=await axios.post("http://localhost:4000/api/v1/Auth/SignUp",{
+        const signupdata=await axios.post("https://bit-code-backend-one.vercel.app/api/v1/Auth/SignUp",{
           FirstName:formData.firstName,
           LastName:formData.lastName,
           Email: formData.email,

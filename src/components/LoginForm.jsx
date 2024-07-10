@@ -24,7 +24,7 @@ const LoginForm = ({setIsLoggedIn}) => {
     const submitHandler = async(event) => {
         event.preventDefault();
         
-        const login=await axios.post("http://localhost:4000/api/v1/Auth/LogIn",{
+        const login=await axios.post("https://bit-code-backend-one.vercel.app/api/v1/Auth/LogIn",{
           Email: formData.email,
           Password: formData.password,
         })

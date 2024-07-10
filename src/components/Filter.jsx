@@ -10,7 +10,7 @@ function Filter({filterData,category,setCategory}){
     const navigate = useNavigate();
     const AllQuestion = async (api) => {
     const QuestionData = await axios.get(
-      `http://localhost:4000/api/v1/Practice/${api}`,
+      `https://bit-code-backend-one.vercel.app/api/v1/Practice/${api}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("Token")}`,
