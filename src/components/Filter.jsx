@@ -1,29 +1,7 @@
-import { useRecoilState } from "recoil";
-import { QuestionData } from "../recoil/Question";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
-
 function Filter({filterData,category,setCategory}){
-
-    const [Question, setQuestion] = useRecoilState(QuestionData);
-    const navigate = useNavigate();
-    const AllQuestion = async (api) => {
-    const QuestionData = await axios.get(
-      `https://bit-code-backend-one.vercel.app/api/v1/Practice/${api}`,
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("Token")}`,
-        },
-      }
-    );
-    setQuestion(QuestionData.data.groupedQuestions);
-  };
-  
 
   function filterHandler(title){
       setCategory(title);
-      AllQuestion(title);
   }
 
   return(

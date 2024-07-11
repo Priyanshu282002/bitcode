@@ -26,6 +26,5 @@ export const filterData = [
     },
     
   ];
-  
-  export const apiUrl = "https://priyanshu282002.github.io/Questions-BitCode/data.json";
+
   

@@ -104,7 +104,7 @@ const SignupForm = ({setIsLoggedIn}) => {
                 <p className='text-white mb-1 leading-[1.375rem]'>Create Password<sup className=' text-red-600'>*</sup></p>
                 <input required type={showPassword? ("text"): ("password")} name='password' onChange={changeHandler} placeholder='Enter Password' value={formData.password} className='w-full rounded-[0.5rem]  p-[12px] border-b-4 border-green-500'/>
 
-                <span className='absolute right-3 bottom-4' onClick={()=> setShowPassword((prev)=> !prev)}>{showPassword? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):(<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
+                <span className='absolute right-3 bottom-4 cursor-pointer' onClick={()=> setShowPassword((prev)=> !prev)}>{showPassword? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):(<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
                 </span>
             </label>
 
@@ -113,12 +113,12 @@ const SignupForm = ({setIsLoggedIn}) => {
 
                 <input required type={showConfirmPassword? ("text"): ("password")} name='confirmPassword' onChange={changeHandler} placeholder='Confirm Password' value={formData.confirmPassword} className='w-full rounded-[0.5rem]  p-[12px] border-b-4 border-green-500'/>
 
-                <span className=' absolute right-3 bottom-4' onClick={()=> setShowConfirmPassword((prev)=> !prev)}>{showConfirmPassword? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):(<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
+                <span className=' absolute right-3 bottom-4 cursor-pointer' onClick={()=> setShowConfirmPassword((prev)=> !prev)}>{showConfirmPassword? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):(<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
                 </span>
             </label>  
         </div>
 
-        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7'>
+        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7 hover:bg-white transition-all duration-300 hover:text-green-600'>
             Create Account
         </button>
     </form>

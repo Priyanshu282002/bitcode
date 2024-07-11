@@ -69,18 +69,18 @@ const LoginForm = ({setIsLoggedIn}) => {
 
             <input type={showPassword ? ("text") : ("password")} required value={formData.password} onChange={changeHandler} placeholder='Enter Password' name='password' className='w-full rounded-[0.5rem]  p-[12px] border-b-4 border-green-500'/>
 
-            <span onClick={()=> setShowPassword((prev)=> !prev)} className='absolute right-3 bottom-11'>
+            <span onClick={()=> setShowPassword((prev)=> !prev)} className='absolute right-3 bottom-11 cursor-pointer'>
                 {showPassword? (<AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF'/>):(<AiOutlineEye fontSize={24} fill='#AFB2BF'/>)}
             </span>
 
             <Link to="#">
-                <p className='mt-1 text-white max-w-max ml-auto'>
+                <p className='mt-1 text-white max-w-max ml-auto hover:text-green-600 transition-all duration-300'>
                     Forgot Password? 
                 </p>
             </Link>
         </label>
 
-        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7'>
+        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7 hover:bg-white transition-all duration-300 hover:text-green-600'>
             Log in
         </button>
 

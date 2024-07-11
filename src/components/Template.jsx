@@ -24,7 +24,7 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
                     <div className='h-[1px] bg-white w-full'></div>
                 </div>
 
-                <button className='w-4/5 flex justify-center items-center rounded-[8px] font-medium text-white border border-richblack-700 px-[12px] py-[8px] gap-x-2 sm:w-full'>
+                <button className='w-4/5 flex justify-center items-center rounded-[8px] font-medium text-white border border-richblack-700 px-[12px] py-[8px] gap-x-2 sm:w-full hover:bg-white hover:text-black transition-all duration-300'>
                     <FcGoogle/>
                     Sign in with Google
                 </button>
