@@ -24,7 +24,7 @@ const Tags = ({sheets}) => {
         keys.map((key)=>{
           return(
             <div key={key}>
-              <button value={key} onClick={clickHandler} className='w-full border-2 border-white rounded-md py-2 font-bold'>{key}</button>
+              <button value={key} id={key} onClick={clickHandler} className='w-full border-2 border-white rounded-md py-2 font-bold'>{key}</button>
 
               
               {
