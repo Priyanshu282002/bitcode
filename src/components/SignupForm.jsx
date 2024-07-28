@@ -118,7 +118,7 @@ const SignupForm = ({setIsLoggedIn}) => {
             </label>  
         </div>
 
-        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7 hover:bg-white transition-all duration-300 hover:text-green-600'>
+        <button className='w-full bg-green-600 rounded-[8px] font-medium text-white px-[12px] py-[8px] mt-7 hover:bg-white transition-all duration-300 hover:text-green-600' id='signup'>
             Create Account
         </button>
     </form>
