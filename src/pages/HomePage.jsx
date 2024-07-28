@@ -13,7 +13,7 @@ const HomePage = () => {
               <button id='courses' className=' bg-green-500 text-white rounded-full px-3 py-3 hover:text-green-500 hover:bg-white outline outline-green-600 transition-all duration-300 text-md font-semibold'>View Courses</button>
             </NavLink>
             <NavLink to={`${localStorage.getItem("Token")!=null?"/practice":"/login"}`}>
-            <button className=' bg-green-500 text-white rounded-full px-3 py-3 hover:text-green-500 hover:bg-white outline outline-green-600 transition-all duration-300 text-md font-semibold'>Do Practice</button>
+            <button id='practice' className=' bg-green-500 text-white rounded-full px-3 py-3 hover:text-green-500 hover:bg-white outline outline-green-600 transition-all duration-300 text-md font-semibold'>Do Practice</button>
             </NavLink>
           </div>
         </div>
