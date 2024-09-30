@@ -62,7 +62,7 @@ const Question = ({question,questionsDone,setId}) => {
         <input type='checkbox'  onChange={clickHandler} checked={selectedIds.includes(question._id)} value={question._id} className="check"/>
 
         <div className='flex justify-between w-[70%]'>
-            <a href={question.QuestionLink} target='_blank' rel='noreferrer' className=''>
+            <a href={question.QuestionLink} target='_blank' rel='noreferrer' className='' id={question.QuestionName}>
                 {
                     question.QuestionName    
                 }

@@ -20,7 +20,7 @@ const Navbar = ({isLoggedIn,setIsLoggedIn}) => {
         <div className='flex justify-between px-10 py-4 items-center border-b-2 h-[10vh]'>
             <div className='flex gap-10 items-center text-xl'>
                 <NavLink to="/">
-                    <img src={logo} alt='logo' className='sm:h-6 h-8 w-25 cursor-pointer hover:scale-110 transition-all duration-300'/>
+                    <img src={logo} alt='logo' className='sm:h-6 h-8 w-25 cursor-pointer hover:scale-110 transition-all duration-300' id='bitcode'/>
                 </NavLink>
                 
                 <NavLink to="/courses">
