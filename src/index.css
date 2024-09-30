@@ -26,6 +26,31 @@
     transform: translateY(5px);
     transition: 200ms;
   }
+
+  .check{
+    appearance: none;/*matlab jo default apperance hai wo nhi chaihye ham khud banayenge */
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check:checked{
+    background-color: hsl(176,100%,44%);
+}
+
+.check:checked::before{
+    content: '🗸';
+    position: absolute;
+    color: hsl(198,20%,13%);
+    font-size: 1.05rem;
+    font-weight:600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-50%);
+}
   
 
  

@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import { useState } from 'react';
 import axios from 'axios';
 import { UserState } from "../recoil/User";
-import { useRecoilState } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 
 const LoginForm = ({setIsLoggedIn}) => {
@@ -24,11 +24,11 @@ const LoginForm = ({setIsLoggedIn}) => {
     const submitHandler = async(event) => {
         event.preventDefault();
         
-        const login=await axios.post("https://bit-code-backend-one.vercel.app/api/v1/Auth/LogIn",{
+        const login=await axios.post("https://bit-code-backend.vercel.app/api/v1/Auth/LogIn",{
           Email: formData.email,
           Password: formData.password,
         })
-        if(login.data.success==false)toast.error(login.data.message)
+        if(login.data.success===false)toast.error(login.data.message)
             else{
                 toast.success(login.data.message)
                 setIsLoggedIn(true);
@@ -44,7 +44,7 @@ const LoginForm = ({setIsLoggedIn}) => {
         // if(login.data.message!=="User already exists")navigate("/")
         
       
-      };
+    };
 
     // function submitHandler(event){
     //     event.preventDefault();

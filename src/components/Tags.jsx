@@ -4,7 +4,7 @@ import { QuestionData } from '../recoil/Question';
 import { useRecoilState } from "recoil";
 import Questions from "./Questions"
 
-const Tags = ({sheets}) => {
+const Tags = ({sheets, Done}) => {
   const [QuestionList, setQuestionList] = useRecoilState(QuestionData);
   const keys=Object.keys(QuestionList);
   const [tag,setTag]=useState(null);
@@ -16,7 +16,7 @@ const Tags = ({sheets}) => {
       setClicked(!clicked)
   }
 
-  
+
   
   return (
     <div className='flex flex-col text-white gap-2'>
@@ -32,12 +32,6 @@ const Tags = ({sheets}) => {
               }
               
             </div>
-
-            
-
-            
-            
-          
           )
         })
       }

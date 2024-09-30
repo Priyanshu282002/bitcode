@@ -2,7 +2,7 @@ import React from 'react'
 import toast from 'react-hot-toast';
 import { AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai"
 import { useNavigate } from 'react-router-dom';
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import axios from 'axios';
 
 const SignupForm = ({setIsLoggedIn}) => {
@@ -32,17 +32,17 @@ const SignupForm = ({setIsLoggedIn}) => {
     //   },[]);
     const submitHandler = async(event) => {
         event.preventDefault();
-        const signupdata=await axios.post("https://bit-code-backend-one.vercel.app/api/v1/Auth/SignUp",{
+        const signupdata=await axios.post("https://bit-code-backend.vercel.app/api/v1/Auth/SignUp",{
           FirstName:formData.firstName,
           LastName:formData.lastName,
           Email: formData.email,
           Password: formData.password,
           ConfirmPassword:formData.confirmPassword
         })
-        if(signupdata.data.success==false)toast.error(signupdata.data.message)
+        if(signupdata.data.success===false)toast.error(signupdata.data.message)
             else toast.success(signupdata.data.message)
         if(signupdata.data.message!=="User already exists")navigate("/login")
-      };
+    };
 
     function changeHandler(event){ 
         setFormData((prevData)=>(
