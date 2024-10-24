@@ -42,7 +42,7 @@
 }
 
 .check:checked::before{
-    content: '🗸';
+    content: '✓';
     position: absolute;
     color: hsl(198,20%,13%);
     font-size: 1.05rem;
